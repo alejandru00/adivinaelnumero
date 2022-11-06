@@ -1,0 +1,41 @@
+import random
+
+x = random.randint (0, 100)
+z = 0
+
+print("")
+print("Prueba a adivinar un número entre el 0 y el 99.")
+
+while True:
+    y = input("Introduzca un número entre el 0 y el 99: ")
+
+    if y.isdigit():
+        z = z + 1
+
+        try:
+            y = int(y)
+
+        except ValueError:
+            print ("La entrada es incorrecta: escribe un numero entero")
+
+        while not 0 <= y < 100:
+            y = int( input ("No has conseguido introducir un número entre el 0 y el 99... prueba otra vez: ")) 
+        
+        if x == y:
+            print("¡Enhorabuena! Has adivinado el número. ")
+            print("Tus intentos para adivinarlo han sido ", end=""), print(z, end=""), print(".")
+            print("")
+            break
+
+        else:
+            if x < y:
+                print("El número es menor que ", end=""), print(y, end=""), print(". Vuelve a intentarlo.")
+                print("")
+                            
+            else:
+                print("El número es mayor que ", end=""), print(y, end=""), print(". Vuelve a intentarlo.")
+                print("")  
+
+    else:
+        print("No has conseguido ni introducir un número... prueba otra vez.")
+        print("")
