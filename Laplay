@@ -38,4 +38,4 @@ while True:
 
     else:
         print("No has conseguido ni introducir un número... prueba otra vez.")
-        print("")
+        print(" ")
