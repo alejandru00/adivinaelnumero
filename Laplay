@@ -4,7 +4,7 @@ x = random.randint (0, 100)
 z = 0
 
 print("")
-print("Prueba a adivinar un número entre el 0 y el 99.")
+print("Prueba a adivinar un número.")
 
 while True:
     y = input("Introduzca un número entre el 0 y el 99: ")
